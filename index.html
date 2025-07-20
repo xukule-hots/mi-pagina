@@ -1,27 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Document</title>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <title>Botones divertidos</title>
     <style>
         body {
             background-color: black;
-        }
-        h1 {
             color: white;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
         }
-        .h1 {
+
+        .botones {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px white;
+        }
+
+        #textoHambre {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-style: italic;
+            color: red;
         }
     </style>
-    <div class="h1">
-        <h1>Tengo hambre</h1>
-        <h1>comprame una papa en tarro</h1>
-        <h1>y una coca cola</h1>
-        </div>
+</head>
+<body>
+
+    <div class="botones">
+        <button onclick="mostrarTexto()">Sí</button>
+        <button id="noBtn" onmouseover="moverBoton()">No</button>
+    </div>
+
+    <div id="textoHambre">Tengo hambre</div>
+
+    <script>
+        function moverBoton() {
+            const boton = document.getElementById("noBtn");
+            const maxX = window.innerWidth - boton.offsetWidth;
+            const maxY = window.innerHeight - boton.offsetHeight;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            boton.style.position = "absolute";
+            boton.style.left = randomX + "px";
+            boton.style.top = randomY + "px";
+        }
+
+        function mostrarTexto() {
+            const texto = document.getElementById("textoHambre");
+            texto.style.display = "block";
+        }
+    </script>
+
 </body>
 </html>
+
