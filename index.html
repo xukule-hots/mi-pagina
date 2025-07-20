@@ -1,77 +1,122 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Botones divertidos</title>
+    <meta charset="UTF-8" />
+    <title>Autos deportivos</title>
     <style>
         body {
             background-color: black;
             color: white;
             margin: 0;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
         }
 
-        .botones {
+        .contenedor {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
+            background-color: #1e1e1e;
+            padding: 30px 50px;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            box-shadow: 1px 1px 30px white;
         }
 
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 10px;
-            border: none;
-            margin: 10px;
-            cursor: pointer;
-            box-shadow: 2px 2px 10px white;
-        }
-
-        #textoHambre {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30px;
+        input {
             font-style: italic;
-            color: red;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px;
+            margin: 5% 0;
+        }
+
+        table {
+            border: 2px solid white;
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid white;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #555;
         }
     </style>
 </head>
+
 <body>
+    <div class="contenedor">
+        <h1>Autos Deportivos Favoritos</h1>
 
-    <div class="botones">
-        <button onclick="mostrarTexto()">Sí</button>
-        <button id="noBtn" onmouseover="moverBoton()">No</button>
+
+        <form>
+            <label for="auto">Nombre del auto</label><br>
+            <input type="text" id="auto" name="auto" placeholder="Ej: Ferrari F8"><br><br>
+
+            <label for="dueno">Nombre del dueño</label><br>
+            <input type="text" name="dueno" id="dueno" placeholder="Ingresa tu nombre"><br><br>
+
+            <label for="ciudad">Ciudad</label><br>
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu ciudad"><br>
+
+            <input type="submit">
+        </form>
+
+
+        <h4>Lamborghini Huracán</h4>
+        <p>
+            El Huracán es uno de los autos más icónicos de Lamborghini. Combina lujo, velocidad y un diseño agresivo.
+        </p>
+        <img src="https://media-front.elmostrador.cl/2023/06/DSC_0108.jpg" height="200" />
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Patente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ferrari</td>
+                    <td>F8 Tributo</td>
+                    <td>FE-RR-88</td>
+                </tr>
+                <tr>
+                    <td>McLaren</td>
+                    <td>720S</td>
+                    <td>MC-LN-77</td>
+                </tr>
+                <tr>
+                    <td>Lamborghini</td>
+                    <td>Huracán</td>
+                    <td>LB-GH-99</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <li>Ferrari</li>
+            <li>McLaren</li>
+            <li>Porsche</li>
+        </ul>
+        <ol>
+            <li style="list-style-type: lower-roman;">Italia</li>
+            <li style="list-style-type: lower-roman;">Reino Unido</li>
+            <li style="list-style-type: lower-roman;">Alemania</li>
+        </ol>
+
+       
     </div>
-
-    <div id="textoHambre">Tengo hambre</div>
-
-    <script>
-        function moverBoton() {
-            const boton = document.getElementById("noBtn");
-            const maxX = window.innerWidth - boton.offsetWidth;
-            const maxY = window.innerHeight - boton.offsetHeight;
-
-            const randomX = Math.floor(Math.random() * maxX);
-            const randomY = Math.floor(Math.random() * maxY);
-
-            boton.style.position = "absolute";
-            boton.style.left = randomX + "px";
-            boton.style.top = randomY + "px";
-        }
-
-        function mostrarTexto() {
-            const texto = document.getElementById("textoHambre");
-            texto.style.display = "block";
-        }
-    </script>
-
 </body>
-</html>
 
+</html>
