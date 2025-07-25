@@ -1,122 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Autos deportivos</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            margin: 0;
-        }
-
-        .contenedor {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #1e1e1e;
-            padding: 30px 50px;
-            border-top-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-            border-top-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            box-shadow: 1px 1px 30px white;
-        }
-
-        input {
-            font-style: italic;
-            border-radius: 10px;
-            box-shadow: 1px 1px 10px;
-            margin: 5% 0;
-        }
-
-        table {
-            border: 2px solid white;
-            color: white;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid white;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #555;
-        }
-    </style>
+    <title>Document</title>
 </head>
+<script src="https://kit.fontawesome.com/c631a1ea99.js" crossorigin="anonymous"></script>
+<style>
+    body{
+         background-color: #262524;
+    }
 
+    i{
+        font-size: 90px;
+        text-shadow: 0px 0px 17px white;
+        cursor: pointer;
+    }
+
+    .contenedor{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: 0.2s ease;
+    }
+
+    i:hover{
+        color: white;
+        text-shadow: 0px 0px 17px aqua;
+    }
+
+    .rot-1{
+        position: absolute;
+        top: -70px;
+        left: -140px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+     .rot-2{
+        position: absolute;
+        top: -70px;
+        left: -60px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+      .rot-3{
+        position: absolute;
+        top: -70px;
+        left: 20px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+      .rot-4{
+        position: absolute;
+        top: -70px;
+        left: 100px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+      .rot-5{
+        position: absolute;
+        top: -70px;
+        left: 170px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+      .rot-6{
+        position: absolute;
+        top: 18px;
+        left: -140px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+     .rot-7{
+        position: absolute;
+        top: 18px;
+        left: -70px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+    .rot-8{
+        position: absolute;
+        top: 110px;
+        left: -140px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+    .rot-9{
+        position: absolute;
+        top: 110px;
+        left: -70px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+    .rot-10{
+        position: absolute;
+        top: 110px;
+        left: 5px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+    .rot-11{
+        position: absolute;
+        top: 110px;
+        left: 88px;
+        transform: translate(-50%,-50%);
+        transition: 0.2s;
+    }
+
+    .rot-1:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-2:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-3:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-4:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-5:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-6:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-7:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-8:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-9:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-10:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+    .rot-11:hover{
+        transform: translate(-50%,-50%) scale(1.3);
+    }
+
+</style>
 <body>
-    <div class="contenedor">
-        <h1>Autos Deportivos Favoritos</h1>
-
-
-        <form>
-            <label for="auto">Nombre del auto</label><br>
-            <input type="text" id="auto" name="auto" placeholder="Ej: Ferrari F8"><br><br>
-
-            <label for="dueno">Nombre del dueño</label><br>
-            <input type="text" name="dueno" id="dueno" placeholder="Ingresa tu nombre"><br><br>
-
-            <label for="ciudad">Ciudad</label><br>
-            <input type="text" name="ciudad" id="ciudad" placeholder="Ingresa tu ciudad"><br>
-
-            <input type="submit">
-        </form>
-
-
-        <h4>Lamborghini Huracán</h4>
-        <p>
-            El Huracán es uno de los autos más icónicos de Lamborghini. Combina lujo, velocidad y un diseño agresivo.
-        </p>
-        <img src="https://media-front.elmostrador.cl/2023/06/DSC_0108.jpg" height="200" />
-
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Patente</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ferrari</td>
-                    <td>F8 Tributo</td>
-                    <td>FE-RR-88</td>
-                </tr>
-                <tr>
-                    <td>McLaren</td>
-                    <td>720S</td>
-                    <td>MC-LN-77</td>
-                </tr>
-                <tr>
-                    <td>Lamborghini</td>
-                    <td>Huracán</td>
-                    <td>LB-GH-99</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <ul>
-            <li>Ferrari</li>
-            <li>McLaren</li>
-            <li>Porsche</li>
-        </ul>
-        <ol>
-            <li style="list-style-type: lower-roman;">Italia</li>
-            <li style="list-style-type: lower-roman;">Reino Unido</li>
-            <li style="list-style-type: lower-roman;">Alemania</li>
-        </ol>
-
-       
+   <div class="contenedor">
+    <div class="rot-1">
+        <i class="fa-solid fa-c" style="margin: 9px;"></i>
+         </div>
+        <div class="rot-2">
+        <i class="fa-solid fa-h" style="margin: 9px;"></i>
+        </div>
+        <div class="rot-3">
+        <i class="fa-solid fa-u" style="margin: 9px;"></i>
+        </div>
+        <div class="rot-4">
+        <i class="fa-solid fa-p" style="margin: 9px;"></i>
+        </div>
+        <div class="rot-5">
+        <i class="fa-solid fa-a" style="margin: 9px;"></i>
+        </div>
+        <br>
+        <div class="rot-6">
+        <i class="fa-solid fa-e" style="margin: 9px;"></i>
+        </div>
+        <div class="rot-7">
+        <i class="fa-solid fa-l" style="margin: 9px;"></i>
+        </div>
+        <br>
+        <div class="rot-8">
+        <i class="fa-solid fa-p" style="margin: 9px;"></i>
+        </div>
+        <div class="rot-9">
+        <i class="fa-solid fa-i" style="margin: 9px;"></i>
+        </div>
+        <div class="rot-10">
+        <i class="fa-solid fa-c" style="margin: 9px;"></i>
+        </div>
+        <div class="rot-11">
+        <i class="fa-solid fa-o" style="margin: 9px;"></i>
+        </div>
     </div>
-</body>
 
+   
+</body>
 </html>
